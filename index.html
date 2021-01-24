@@ -39,26 +39,26 @@
     </form> 
 
 
-    			
+    	<h2>Regular experession</h2>		
       <input type="text" id="pass" placeholder="Password">
 			<button id="check">Click</button>
 			<p id="error"></p>
     
       <script>
-        let regularExp = /^[A-Z][0-9]/  // definde Regular experession
-let password = document.getElementById("pass")
-let button = document.getElementById("check")
-let error = document.getElementById("error")
+	let regularExp = /^[A-Z][0-9]/  // definde Regular experession
+	let password = document.getElementById("pass")
+	let button = document.getElementById("check")
+	let error = document.getElementById("error")
 
-button.addEventListener("click", ()=>{
-  let result = regularExp.test(password.value)   // test() method
+	button.addEventListener("click", ()=>{
+	  let result = regularExp.test(password.value)   // test() method
 
-  if (result === true){
-    error.innerHTML = "Password correct!"
-  }else{
-    error.innerHTML = "Password NOT correct!"
-  }
-})
+	  if (result === true){
+	    error.innerHTML = "Password correct!"
+	  }else{
+	    error.innerHTML = "Password NOT correct!"
+	  }
+	})
       </script>
     
   </body>
