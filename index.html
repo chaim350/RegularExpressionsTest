@@ -27,7 +27,7 @@ cookie_expired:2592000
   </head>
   <body>
 	
-    <h2>Form API </h2>
+    <h2>Form API Test </h2>
 
     <form action="https://www.fixdigital.co.il/api/v1.2/lead/addApi?projectID=2837&projectTypeID=5&clientID=1115&tenantID=82&FORMURL=https://github.com/chaim350/RegularExpressionsTest&name=fname&phone=phone&email=email
     ">
@@ -35,11 +35,22 @@ cookie_expired:2592000
       <input type="text" id="fname" name="fname" placeholder="Name"><br>
       <input type="text" id="email" name="email" placeholder="Email"><br>
       <input type="text" id="phone" name="phone" placeholder="Phone"><br><br>
-      <input type="submit" value="Submit">
+      <input id="submit" type="submit" value="Submit">
     </form> 
 	
 
+<script>
+
+         let submit = document.getElementById("submit")
+	 
+         submit.addEventListener("click", ()=>{
+         let name = document.getElementById("fname").value
+         let email = document.getElementById("email").value
+         let phone = document.getElementById("phone").value
+         console.log(name + " " + email + " " + phone)
+         })
 	
+ </script>
 	  
 	  
     	<h2>Regular experession</h2>		
